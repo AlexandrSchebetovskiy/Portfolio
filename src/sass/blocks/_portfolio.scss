@@ -1,0 +1,40 @@
+.portfolio{
+    padding-top: 120px;
+    &__tittle{
+        position: relative;
+        text-align: center;
+        @include before_circle;
+        &:before{
+            left: 50%;
+            transform: translateX(-50%);
+        }   
+    }
+    &__subtittle{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    &__wrapper{
+        margin-top: 60px;
+        display: grid;
+        grid-template: repeat(2,280px) / repeat(4, 280px);
+        gap: 5px;
+        .vertiacal{
+            grid-row: 1/2;
+            grid-column: 4/5;
+        }
+        .horizontal{
+            grid-column: 2/4;
+            grid-row:2/3;
+        }
+    }
+    &__item{
+        transition: .5s all;
+            &:hover{
+                transform: scale(1.02);
+            }
+            img{
+                width: 100%;
+            }
+        
+    }
+}
